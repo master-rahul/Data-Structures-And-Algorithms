@@ -14,7 +14,7 @@ int main(){
 		cin>>array[i];
 	}
 	
-	cout<<"\nPlease enter the element you want to sarch: \n";
+	cout<<"\nPlease enter the element you want to search: \n";
 	cin>>value;
 	
 	for(int i = 0; i < size; i++){
