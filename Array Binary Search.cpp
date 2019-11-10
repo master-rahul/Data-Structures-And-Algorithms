@@ -18,23 +18,21 @@ int main(){
 	cout<<"\nPlease enter the element you want to search: \n";
 	cin>>value;
 	
-	for(int i=0; i<size; i++){
-		position = (upperBound + lowerBound) / 2;
-		
-		if(value == array[position]){
-			cout<<"\nYour value is at: "<<position+1<<"th position";
-			cout<<"\n\nThankyou for using Linear Search..";
+	position = (lowerBound + upperBound) /2;
+	while(lowerBound <= upperBound){
+		if (array[position] < value)
+         	lowerBound = position + 1;    
+      	else if (array[position] == value) {
+         	cout<<"\nYour value is at: "<<position+1<<"th position";
+         	cout<<"\n\nThankyou for using Linear Search..";
 			return 0;
-		}
-		else if(value > array[position]){
-			lowerBound = position + 1;
-		}
-		else{
-			upperBound = position -1;
-		}
+      	}
+      	else
+         	upperBound = position - 1;
+      		position = (lowerBound + upperBound)/2;
 	}
 	
-	cout<<"\nYour value is anot present in array";
+	cout<<"\nYour value is not present in array";
 	cout<<"\n\nThankyou for using Linear Search..";
 	
 	return 0;
